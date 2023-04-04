@@ -1,0 +1,26 @@
+#include "..\include\resource.h"
+
+#define ID_DLG_MAIN   100
+#define ID_GROUP      1001
+#define ID_CHANGE     1002
+
+ID_DLG_MAIN DIALOG 179, 74, 249, 238
+	STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Asm Notepad"
+FONT 8, "Helv"
+MENU 100
+
+BEGIN
+    EDITTEXT        101, 6, 6, 237, 226, ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_NOHIDESEL | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+END
+1000 MENU
+BEGIN
+    POPUP "&Plik"
+        BEGIN
+        MENUITEM "&Otwórz", 1020
+        MENUITEM "&Zapisz", 1030
+        MENUITEM "&Zakorz", 1040
+        END
+END
